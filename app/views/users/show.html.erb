@@ -2,7 +2,7 @@
    <h2>Hi <%= current_user.username %>.</h2>
       <li>E-mail: <%= current_user.email %></li>
     <% if current_user.occasions.empty? %>
-      <div class="row">
+      <div class="jumbotron">
          <p>You have no upcoming potlucks scheduled. Get social. <%= link_to "Join a potluck!", new_user_events_path(current_user) %></p>
       </div>
       <% else %>
@@ -11,6 +11,14 @@
           <% current_user.occasions.each do |occasion| %>
             <li><%= link_to occasion.title, occasion_path(occasion) %></li>
           <% end %>
+        </div>
+      <% end %>
+    <div class="row">
+          <h3>Dishes To Prepare:</h3>
+          <% current_user.dishes.each do |dish| %>
+            <li><%= dish.name %></li>
+            <li><%= dish.course %></li>
+          <% end %>
+          <!-- could use react here -->
      </div>
-    <% end %>
   </div>

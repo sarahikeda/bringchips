@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :state
       t.integer :zip
       t.text :bio
+      t.references :dishes
       t.timestamps null: false
     end
   end

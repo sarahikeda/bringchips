@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20150430205120) do
     t.string   "name"
     t.string   "course"
     t.boolean  "gluten_free"
-    t.integer  "users_id"
+    t.integer  "user_id"
     t.integer  "occasion_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

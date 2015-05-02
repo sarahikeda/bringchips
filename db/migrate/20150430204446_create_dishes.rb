@@ -4,7 +4,7 @@ class CreateDishes < ActiveRecord::Migration
       t.string :name
       t.string :course
       t.boolean :gluten_free
-      t.references :users
+      t.references :user
       t.references :occasion
       t.timestamps null: false
     end
