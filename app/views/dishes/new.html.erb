@@ -1,0 +1,28 @@
+<div class = "container">
+  <h2>What will you bring?</h2>
+  <%= form_for :dishes do |f|  %>
+
+    <div class="field">
+      <%= f.label :name, "Name of dish: " %> <br />
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :Course, "Course: " %> <br />
+      <%= f.text_field :Course %>
+    </div>
+
+    <div class="field">
+      <%= f.label :gluten_free, "Gluten free? " %> <br />
+      <%= f.text_field :gluten_free %>
+    </div>
+  </br>
+     <%= submit_tag "Create New Potluck", id: "submit-new-meetup-btn",class: "btn btn-success" %>
+  <% end %>
+
+
+<%= link_to "Back to Profile", user_path(current_user.id) %><br>
+  <%= link_to "Back to Home", welcome_index_path %><br><br>
+
+    <%= link_to image_tag("gbeans.jpg", :class => "gbeans-img"), welcome_index_path %>
+    </div>

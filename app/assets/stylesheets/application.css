@@ -61,3 +61,11 @@
   font-family: "Lora";
 }
 
+.gbeans-img {
+  max-width: 40%;
+  max-height: 20%;
+  border-radius: 20%;
+  float: right;
+  position: relative;
+  margin-right: 10px;
+}
