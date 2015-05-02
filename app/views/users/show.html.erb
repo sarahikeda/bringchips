@@ -1,4 +1,8 @@
  <div class="container">
+   <h2>Hi <%= current_user.username %>.</h2>
+            <li><%= current_user.email %></li>
+
+
     <% if current_user.occasions.empty? %>
       <div class="row">
          <h3>Get social. Join a potluck!</h3>
