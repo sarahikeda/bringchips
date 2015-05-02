@@ -1,12 +1,9 @@
  <div class="container">
    <h2>Hi <%= current_user.username %>.</h2>
-            <li><%= current_user.email %></li>
-
-
+      <li>E-mail: <%= current_user.email %></li>
     <% if current_user.occasions.empty? %>
       <div class="row">
-         <h3>Get social. Join a potluck!</h3>
-         <%= link_to "Sign Up", new_occasion_path %>
+         <p>You have no upcoming potlucks scheduled. Get social. <%= link_to "Join a potluck!", new_user_events_path(current_user) %></p>
       </div>
       <% else %>
         <div class="row">
