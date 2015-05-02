@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+
+.main-img {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  /*background: rgba(0, 0, 0, 0.75);*/
+  color: white;
+  max-width: 70%;
+  font-size: 20px;
+}
+
+#title {
+  font-size: 150px;
+}
+
+.landing-form {
+  position:absolute;
+  top: 50%;
+  left: 20%;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}

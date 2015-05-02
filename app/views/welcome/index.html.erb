@@ -1,2 +1,20 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class = "container">
+  <%= link_to image_tag("potluck.jpg", :class => "main-img") %>
+  <div class="header">
+    <p id="title">Bring chips.</p>
+    <p>Attending or hosting a potluck?</br>
+      Keep track of who's bringing what.</p>
+  </div>
+  <h1>Signup!</h1>
+<div class = "landing-form">
+<%= form_for :user, url: '/users' do |f| %>
+
+  Name: <%= f.text_field :name %></br></br>
+  Email: <%= f.text_field :email %></br>
+  Password: <%= f.password_field :password %></br>
+  Password Confirmation: <%= f.password_field :password_confirmation %></br>
+  <%= f.submit "Sign Up" %>
+
+  <% end %>
+  </div>
+</div>

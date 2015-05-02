@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :occasions
   root 'welcome#index'
 
+  get '/users/:id/events' => 'events#show', as: :events
+  get '/users/new' => 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
