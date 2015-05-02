@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   resources :occasions
   root 'welcome#index'
 
-  get '/users/:id/events' => 'events#show', as: :events
-  get '/users/new' => 'welcome#index'
+  get "/signup" => "users#new"
+  get "/login"   => "sessions#new"
+  post "/login"  => "sessions#create"
+  delete "/logout"  => "sessions#destroy"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

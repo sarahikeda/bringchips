@@ -25,29 +25,41 @@
   height: auto;
 
   /* Set up positioning */
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 60px;
   left: 0;
 }
 
 .header {
   position: absolute;
-  top: 5%;
-  left: 10%;
-  /*background: rgba(0, 0, 0, 0.75);*/
+  top: 8%;
+  left: 12%;
   color: white;
   max-width: 70%;
-  font-size: 20px;
+  font-size: 120px;
+  font-family: 'Lora';
 }
 
-#title {
-  font-size: 150px;
-}
 
-.landing-form {
-  position:absolute;
-  top: 50%;
-  left: 20%;
+.form-inline {
+  top: 40%;
+  left: 72%;
+  max-width: 20%;
+  position: absolute;
   background: rgba(0, 0, 0, 0.75);
   color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.sign-button {
+  background-color: rgb(226, 69, 224);
+}
+
+
+.navbar {
+  /*position: fixed;*/
+  background-color: black;
+  /*float: right;*/
+  top: -(x)px;
 }

@@ -2,12 +2,27 @@
 <html>
 <head>
   <title>Potluck</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= stylesheet_link_tag    'application', 'http://fonts.googleapis.com/css?family=Lora:400,700', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+            <li> <%= link_to "Hi, #{current_user.username.titleize}!", user_path(current_user.id) %></li>
+            <li class="active"><%= link_to "Logout", logout_path, method: :delete %></li>
+          <% else %>
+            <li class="active"><%= link_to "Sign Up", signup_path %></li>
+           <li class="active"><%= link_to "Login", login_path %></li>
+         <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
 <%= yield %>
 
 </body>
