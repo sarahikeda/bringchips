@@ -42,24 +42,22 @@
 
 
 .form-inline {
-  top: 40%;
-  left: 72%;
-  max-width: 20%;
+  top: 62%;
+  left: 30%;
   position: absolute;
   background: rgba(0, 0, 0, 0.75);
   color: white;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 30px;
+  padding: 10px 100px 20px 100px;
+  font-family: "Lora";
+}
+
+.form-text {
+  color: black;
 }
 
 .sign-button {
   background-color: rgb(226, 69, 224);
+  font-family: "Lora";
 }
 
-
-.navbar {
-  /*position: fixed;*/
-  background-color: black;
-  /*float: right;*/
-  top: -(x)px;
-}

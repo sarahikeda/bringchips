@@ -9,14 +9,10 @@
 
  <div class = "form-inline">
 <%= form_for :user, url: '/users' do |f| %>
-  Name: </br>
-  <%= f.text_field :name %></br>
-  Email: </br>
-  <%= f.text_field :email %></br>
-  Password: </br>
-  <%= f.password_field :password %></br>
+  What are you bringing? </br>
+  <%= f.text_field :name, :class => "form-text" %>
 
-  <%= f.submit "Sign Up", :class => "sign-button" %>
+  <%= f.submit "Go", :class => "sign-button" %>
 
   <% end %>
   </div>
