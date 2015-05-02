@@ -1,19 +1,13 @@
 
 <div class = "container">
   <%= link_to image_tag("potluck.jpg", :class => "main-img") %>
-
-
 <!--     <p>Attending or hosting a potluck?</br>
       Keep track of who's bringing what .</p>-->
 
-
- <div class = "form-inline">
-<%= form_for :user, url: '/users' do |f| %>
-  What are you bringing? </br>
-  <%= f.text_field :name, :class => "form-text" %>
-
-  <%= f.submit "Go", :class => "sign-button" %>
-
+<div class = "form-inline">
+  <%= form_for :user, url: '/users' do |f| %>
+    <p>What are you bringing?</p> </br>
+    <%= f.text_field :name, :class => "form-text" %>
+    <%= f.submit "Go", :class => "sign-button" %>
   <% end %>
-  </div>
-</div>
+</div></div>

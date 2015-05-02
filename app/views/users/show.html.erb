@@ -1,0 +1,15 @@
+ <div class="container">
+    <% if current_user.occasions.empty? %>
+      <div class="row">
+         <h3>Get social. Join a potluck!</h3>
+         <%= link_to "Sign Up", new_occasion_path %>
+      </div>
+      <% else %>
+        <div class="row">
+          <h3>Upcoming Potlucks</h3>
+          <% current_user.occasions.each do |occasion| %>
+            <li><%= link_to occasion.title, occasion_path(occasion) %></li>
+          <% end %>
+     </div>
+    <% end %>
+  </div>
