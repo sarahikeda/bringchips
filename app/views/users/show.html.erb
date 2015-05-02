@@ -15,9 +15,9 @@
       <% end %>
     <div class="row">
           <h3>Dishes To Prepare:</h3>
-          <% current_user.dishes.each do |dish| %>
-            <li><%= dish.name %></li>
-            <li><%= dish.course %></li>
+          <% @dishes.each do |dish| %>
+            <li>Name: <%= dish.name %>
+              Course: <%= dish.course %></li>
           <% end %>
           <!-- could use react here -->
      </div>

@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20150430205120) do
     t.integer  "zip"
     t.datetime "date"
     t.datetime "time"
-    t.integer  "creator_id_id"
+    t.integer  "creator_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20150430205120) do
     t.string   "state"
     t.integer  "zip"
     t.text     "bio"
+    t.integer  "dishes_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

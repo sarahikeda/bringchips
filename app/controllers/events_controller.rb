@@ -5,17 +5,16 @@ class EventsController < ApplicationController
   end
 
   def new
-    @user = User.find_by_id(params[:id])
+    @user = current_user
     @event = Event.new
     render 'new'
   end
 
   def create
-    @user = User.find_by_id(params[:id])
-    @event = Event.new(event_params, creator: @user)
+    @event = Event.new(event_params)
+    @event.creator = @current_user
     if @event.save
-      session[:user_id] = @event.id
-      render "new"
+      redirect_to welcome_index_path
     else
       @event.errors
       render "new"
