@@ -29,9 +29,7 @@
               <p><%= link_to "Add Dish", new_dish_path, class: "btn btn-success"   %></p>
           <% else %>
             <% @dishes.each do |dish| %>
-              <li>Name: <%= dish.name %>,
-                Course: <%= dish.course %></li>
-            <%= link_to 'Show', dish_path(dish) %>
+              <li><%= link_to dish.name, dish_path(dish) %></li>
           <% end %>
             <p><%= link_to "Add dish.",  new_dish_path, class: "btn btn-success"   %></p>
         <% end %>

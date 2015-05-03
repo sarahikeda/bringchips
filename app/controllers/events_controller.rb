@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
 
+  respond_to :html, :js
   def index
     @events = Event.all.order('date DESC')
   end
