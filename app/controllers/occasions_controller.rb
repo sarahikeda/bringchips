@@ -1,13 +1,18 @@
 class OccasionsController < ApplicationController
-
+# necessary?
   def new
     @occasion = Occasion.create(event_id: params[:id])
-    @occasion.users << current_user
+    @event.attendees << current_user
     redirect_to user_path(current_user.id)
   end
 
   def show
     @occasion = Occasion.find(params[:id])
+  end
+
+  def edit
+    @event = Event.find(params[:id])
+    @event.attendees << current_user
   end
 
   def create

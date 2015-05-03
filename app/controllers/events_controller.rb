@@ -20,7 +20,11 @@ class EventsController < ApplicationController
       render "new"
     end
   end
-
+  def edit
+    @event = Event.find(params[:id])
+    @event.attendees << current_user
+    redirect_to user_path(params[:id])
+  end
   def show
     @event = Event.find_by_id(params[:id])
   end

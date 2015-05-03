@@ -9,11 +9,12 @@
       <% else %>
         <div class="row">
           <div class="col-xs-12 tile-container">
-          <div class="thumbnail">
+          <div class="jumbotron">
           <h3>Upcoming Potlucks</h3>
           <% current_user.events.each do |event| %>
             <li><%= link_to event.title, event_path(event) %></li>
           <% end %>
+          <%= link_to "Join more.", events_path %>
           </div>
             </div>
             </div>
