@@ -9,7 +9,7 @@ class CreateEvents < ActiveRecord::Migration
       t.integer :zip
       t.datetime :date
       t.integer :start_time
-      t.belongs_to :creator
+      t.references :creator
 
       t.timestamps null: false
     end

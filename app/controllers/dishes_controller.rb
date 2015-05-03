@@ -5,20 +5,20 @@ class DishesController < ApplicationController
   end
 
   def create
-    @dish = Dish.new(dish_params)
-    @dish.user = current_user
-   if @dish.save
-      redirect_to welcome_index_path
-    else
-      render 'new'
-    end
+      @event = Event.find_by_title(params[:dish][:events])
+    @dish = Dish.create(
+      name: params[:dish][:name],
+      course: params[:dish][:course],
+      gluten_free: params[:dish][:gluten_free],
+      event_id: @event.id
+      )
+      current_user.dishes << @dish
+      p params[:dish][:events]
+
+      redirect_to user_path(current_user)
   end
   def show
-
+    @dish = Dish.find(params[:id])
   end
 
-private
-  def dish_params
-    params.require(:dish).permit(:name, :course, :gluten_free)
-  end
 end

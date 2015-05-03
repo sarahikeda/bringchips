@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(version: 20150430205120) do
     t.string   "name"
     t.string   "course"
     t.boolean  "gluten_free"
-    t.integer  "user_id"
-    t.integer  "event_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -38,11 +36,11 @@ ActiveRecord::Schema.define(version: 20150430205120) do
   end
 
   create_table "occasions", force: :cascade do |t|
-    t.integer  "user_id"
+    t.integer  "attendee_id"
     t.integer  "event_id"
     t.integer  "dish_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,7 +53,6 @@ ActiveRecord::Schema.define(version: 20150430205120) do
     t.string   "state"
     t.integer  "zip"
     t.text     "bio"
-    t.integer  "dishes_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

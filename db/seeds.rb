@@ -14,18 +14,20 @@ end
   Event.create(title: Faker::Lorem.word, description: Faker::Lorem.sentence, street_address: Faker::Address.street_address, city: Faker::Address.city, state: "TX", zip: Faker::Address.zip, date: "05/08/2015", start_time: "7" )
 end
 
-
-
-
 users = User.all
-events = Event.all
-
-10.times do
-  Occasion.create(user: users.sample, event: events.sample)
-end
-
-occasions = Occasion.all
 
 10.times do
   Dish.create(name: Faker::Commerce.color, course: "Lunch", gluten_free: true)
 end
+
+
+
+dishes = Dish.all
+events = Event.all
+
+10.times do
+  Occasion.create(attendee: users.sample, event: events.sample, dish: dishes.sample)
+end
+
+
+

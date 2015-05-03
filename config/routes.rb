@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :events
-  resources :occasions
+
   root 'welcome#index'
 
   get "/signup" => "users#new"

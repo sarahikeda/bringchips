@@ -1,7 +1,7 @@
 class CreateOccasions < ActiveRecord::Migration
   def change
     create_table :occasions do |t|
-      t.references :user
+      t.references :attendee
       t.references :event
       t.references :dish
 
