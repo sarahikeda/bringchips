@@ -1,40 +1,43 @@
-<div class="signup">
-  <%= form_for @user, :html => { class: "form-horizontal" } do |f| %>
-  <legend>Sign Up</legend>
-  <%if @user.errors.any?%>
-    <%@user.errors.full_messages.each do |message|%>
-      <p><%=message%></p>
+<div class = "container">
+  <div class="two-column">
+    <%= form_for @user, :html => { class: "form-horizontal" } do |f| %>
+    <legend>Sign Up</legend>
+    <%if @user.errors.any?%>
+      <%@user.errors.full_messages.each do |message|%>
+        <p><%=message%></p>
+      <%end%>
     <%end%>
-  <%end%>
-  <div class="form-group">
-    <%= f.label :username, class: "col-lg-2 control-label" %>
-    <div class="col-lg-10">
-      <%= f.text_field :username, placeholder: "Username", class: "form-control", id: "inputUsername" %>
+    <div class="form-group">
+      <%= f.label :username, class: "col-lg-2 control-label" %>
+      <div class="col-lg-10">
+        <%= f.text_field :username, placeholder: "Username", class: "form-control", id: "inputUsername" %>
+      </div>
     </div>
-  </div>
-   <div class="form-group">
-    <%= f.label :name, class: "col-lg-2 control-label" %>
-    <div class="col-lg-10">
-      <%= f.text_field :name, placeholder: "Name", class: "form-control", id: "inputName" %>
+     <div class="form-group">
+      <%= f.label :name, class: "col-lg-2 control-label" %>
+      <div class="col-lg-10">
+        <%= f.text_field :name, placeholder: "Name", class: "form-control", id: "inputName" %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :email, class: "col-lg-2 control-label" %>
-    <div class="col-lg-10">
-      <%= f.email_field :email, placeholder: "Email", class: "form-control", id: "inputEmail" %>
+    <div class="form-group">
+      <%= f.label :email, class: "col-lg-2 control-label" %>
+      <div class="col-lg-10">
+        <%= f.email_field :email, placeholder: "Email", class: "form-control", id: "inputEmail" %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :password, class: "col-lg-2 control-label" %>
-    <div class="col-lg-10">
-      <%= f.password_field :password, placeholder: "Password", class: "form-control", id: "inputPassword" %>
+    <div class="form-group">
+      <%= f.label :password, class: "col-lg-2 control-label" %>
+      <div class="col-lg-10">
+        <%= f.password_field :password, placeholder: "Password", class: "form-control", id: "inputPassword" %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :password_confirmation, class: "col-lg-2 control-label" %>
-    <div class="col-lg-10">
-      <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "form-control", id: "inputPasswordConfirmation" %>
+    <div class="form-group">
+      <%= f.label :password_confirmation, class: "col-lg-2 control-label" %>
+      <div class="col-lg-10">
+        <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "form-control", id: "inputPasswordConfirmation" %><br>
+      </div>
     </div>
+    <%= f.submit value: 'Sign Up', class: "btn btn-primary" %><br>
+    <% end %>
+    <%= link_to image_tag("outdoor_potluck.jpg", :class => "outdoor-potluck"), welcome_index_path %>
   </div>
-  <%= f.submit value: 'Sign Up', class: "btn btn-primary" %>
-  <% end %>
