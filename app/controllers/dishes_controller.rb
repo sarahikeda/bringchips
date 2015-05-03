@@ -5,20 +5,20 @@ class DishesController < ApplicationController
   end
 
   def create
-      @event = Event.find_by_title(params[:dish][:events])
+    @event = Event.find_by_title(params[:dish][:events])
     @dish = Dish.create(
       name: params[:dish][:name],
       course: params[:dish][:course],
       gluten_free: params[:dish][:gluten_free],
-      event_id: @event.id
       )
       current_user.dishes << @dish
-      p params[:dish][:events]
+      @dish.events << @event
 
       redirect_to user_path(current_user)
   end
   def show
     @dish = Dish.find(params[:id])
+    @events = @dish.events
   end
 
 end

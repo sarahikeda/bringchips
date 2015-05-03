@@ -26,14 +26,14 @@
           <h3>Dishes To Prepare:</h3>
           <% if @dishes.empty? %>
             <p>You haven't signed up to cook anything yet? Get with it.</p>
-              <p><%= link_to "Add Dish", new_user_dishes_path(current_user), class: "btn btn-success"   %></p>
+              <p><%= link_to "Add Dish", new_dish_path, class: "btn btn-success"   %></p>
           <% else %>
             <% @dishes.each do |dish| %>
               <li>Name: <%= dish.name %>,
                 Course: <%= dish.course %></li>
-            <%= link_to 'Show', edit_user_dishes_path(current_user.id, dish.id) %>
+            <%= link_to 'Show', dish_path(dish) %>
           <% end %>
-            <p><%= link_to "Add dish.",  user_dishes_path(current_user), class: "btn btn-success"   %></p>
+            <p><%= link_to "Add dish.",  new_dish_path, class: "btn btn-success"   %></p>
         <% end %>
         <br>
            </div>

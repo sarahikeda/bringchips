@@ -1,6 +1,10 @@
  <div class="container">
   <div class="jumbotron">
     <h2>You're making: <%=@dish.name %></h2>
+    <p>Events where this dish will be a hit: </p>
+      <% @events.each do |event| %>
+        <%= event.title%> on <%= event.date.strftime("%B %d, %Y") %>
+      <% end %>
   </div>
 </div>
 

@@ -5,12 +5,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  resources :users do
-    resource :dishes
-  end
-
+  resources :users
   resources :events
-
+  resources :dishes
   root 'welcome#index'
 
   get "/signup" => "users#new"
