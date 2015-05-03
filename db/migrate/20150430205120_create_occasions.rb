@@ -3,7 +3,7 @@ class CreateOccasions < ActiveRecord::Migration
     create_table :occasions do |t|
       t.references :user
       t.references :event
-
+      t.references :dish
 
       t.timestamps null: false
     end

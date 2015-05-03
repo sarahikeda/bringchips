@@ -27,5 +27,5 @@ end
 occasions = Occasion.all
 
 10.times do
-  Dish.create(name: Faker::Commerce.color, course: "Lunch", gluten_free: true, occasion: occasions.sample)
+  Dish.create(name: Faker::Commerce.color, course: "Lunch", gluten_free: true)
 end

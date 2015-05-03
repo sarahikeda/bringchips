@@ -1,4 +1,5 @@
 class Dish < ActiveRecord::Base
   belongs_to :user
-  belongs_to :occasion
+  has_many :occasions
+  has_many :events, through: :occasions
 end

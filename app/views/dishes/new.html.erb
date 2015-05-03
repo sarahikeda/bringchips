@@ -20,6 +20,11 @@
       <br />
     </div>
   </br>
+   <div class="field">
+    <%= f.label :events, "Event Title:" %> <br />
+      <%= f.select 'events', current_user.events.map {|event| [ event.title, event.title ] }, { prompt: "Select Event" } %>
+    </div>
+    <br>
      <%= submit_tag "Create New Potluck", id: "submit-new-meetup-btn",class: "btn btn-success" %>
   <% end %>
 
