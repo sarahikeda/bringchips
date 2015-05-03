@@ -50,10 +50,10 @@
   font-family: "Lora";
 }
 
-.gbeans-img {
-  max-width: 40%;
-  max-height: 20%;
-  border-radius: 20%;
+.corn-img {
+  max-width: 50%;
+  max-height: 70%;
+  border-radius: 10%;
   float: right;
   position: relative;
   margin-right: 10px;
@@ -62,8 +62,7 @@
 .btn  {
   background-color: rgb(195, 28, 187);
   border-color: rgb(214, 105, 221);
-  font-size: 20px;
-  border-radius: 10%;
+  font-size: 20px;;
 }
 
 .outdoor-potluck {
