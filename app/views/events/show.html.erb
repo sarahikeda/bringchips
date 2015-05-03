@@ -8,8 +8,8 @@
           <li><%= @event.city %></li>
           <li>state: <%= @event.state %></li>
           <li><%= @event.zip %></li>
-          <li><%= @event.date %></li>
-          <li>time: <%= @event.time %></li>
+          <li><%= @event.date.strftime("%B %d, %Y") %></li>
+          <li>time: <%= @event.time.strftime(" %H:%M") %></li>
           <li><%= @event.description %></li>
       </div>
 </div>
