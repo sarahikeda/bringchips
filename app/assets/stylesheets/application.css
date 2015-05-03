@@ -14,7 +14,13 @@
  *= require_self
  */
 
+body {
+  font-size: 20px;
+}
 
+.user-form {
+  max-width: 80%;
+}
 .main-img {
   /* Set rules to fill background */
   min-height: 90%;
@@ -82,3 +88,4 @@
   -moz-column-width: 150px;
   column-width: 160px;
 }
+
