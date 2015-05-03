@@ -7,7 +7,7 @@
 <div class = "form-inline">
   <%= form_for :user, url: '/users' do |f| %>
     <p>What are you bringing?</p> </br>
-    <%= f.text_field :name, :class => "form-text" %>
+    <%= f.text_field :name, :class => "form-text", :placeholder => " Killer Mac & Cheese" %>
     <%= f.submit "Go", :class => "sign-button" %>
   <% end %>
 </div></div>

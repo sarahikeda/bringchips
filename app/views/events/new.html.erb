@@ -2,28 +2,17 @@
   <h2>Add A New Potluck</h2>
   <%= form_for @event do |f| %>
     <p>
-    <%= f.label :title, "Fancy Name For Event" %><br>
-    <%= f.text_field :title %>
-    </p>
-
-    <p>
-      <%= f.label :description %><br>
-      <%= f.text_area :description %>
+    <%= f.label :title, "Fancy Name" %><br>
+    <%= f.text_field :title, :size => "30x10" %>
     </p>
 
      <p>
-    <%= f.label :street_address, "Street Address" %>
-    <%= f.text_field :street_address %>
+    <%= f.label :street_address, "Street Address" %><br>
+    <%= f.text_field :street_address, :size => "30x10" %>
     </p>
     <p>
-    <%= f.label :city %>
-    <%= f.text_field :city %>
-
-    <%= f.label :state %>
-    <%= f.text_field :state %>
-
-    <%= f.label :zip %>
-    <%= f.text_field :zip %>
+    <%= f.label :zip %><br>
+    <%= f.text_field :zip, :size => "10x10" %>
     </p>
 
      <p>
@@ -35,8 +24,13 @@
     <%= f.label :start_time, "Start Time" %><br>
     <%= f.time_field :time %>
     </p>
+
+      <p>
+      <%= f.label :description %><br>
+      <%= f.text_area :description, :size => "80x5" %>
+    </p>
     <p>
-       <%= submit_tag "Create New Potluck", id: "submit-new-meetup-btn",class: "btn btn-success" %>
+       <%= submit_tag "Create It.", id: "submit-new-meetup-btn",class: "btn btn-success" %>
     </p>
   <% end %>
 </div>
