@@ -1,5 +1,6 @@
+<div class = "no-background">
 <div class = "container">
-  <div class="two-column">
+
   <h2>What will you bring?</h2>
   <%= form_for @dish do |f|  %>
 
@@ -25,7 +26,8 @@
      <%= submit_tag "Make it.", id: "submit-new-meetup-btn",class: "btn btn-success" %>
   <% end %>
 
-
-    <%= link_to image_tag("outdoor_potluck.jpg", :class => "outdoor-potluck"), user_path(current_user) %>
+<!--
+    <%= link_to image_tag("outdoor_potluck.jpg", :class => "outdoor-potluck"), user_path(current_user) %> -->
   </div>
+
 </div>

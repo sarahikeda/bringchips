@@ -1,5 +1,5 @@
 <div class = "container">
-  <div class = "two-column">
+
     <h2>Add A New Potluck</h2>
     <%= form_for @event do |f| %>
       <p>
@@ -32,9 +32,7 @@
 
     <p>
        <%= submit_tag "Create It.", id: "submit-new-meetup-btn",class: "btn btn-success" %>
-    </p>
-      <%= link_to image_tag("outdoor_potluck.jpg", :class => "outdoor-potluck"), welcome_index_path %>
-    </p>
+
   <% end %>
-</div>
+
 </div>

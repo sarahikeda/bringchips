@@ -70,7 +70,7 @@ body {
 }
 
 .btn  {
-  background-color: rgb(195, 28, 187);
+  background: rgba(195, 28, 187, 0.7);
   border-color: rgb(214, 105, 221);
   font-size: 20px;;
 }
@@ -93,3 +93,6 @@ body {
   column-width: 160px;
 }
 
+.jumbotron {
+  background: rgba(148, 148, 148, 0.35);
+}
