@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 
   def show
     @dishes = Dish.where(user: current_user).order(created_at: :desc).limit(5)
+    @created_events = Event.where(creator_id: current_user.id)
   end
   def user_params
     params.require(:user).permit(:username, :name, :email, :password, :password_confirmation)

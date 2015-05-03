@@ -1,6 +1,6 @@
 <div class = "container">
   <h2>Add A New Potluck</h2>
-  <%= form_for [@user, @event] do |f| %>
+  <%= form_for @event do |f| %>
     <p>
     <%= f.label :title, "Fancy Name For Event" %><br>
     <%= f.text_field :title %>
