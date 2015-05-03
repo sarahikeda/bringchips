@@ -11,7 +11,7 @@
 end
 
 10.times do
-  Event.create(title: Faker::Lorem.word, description: Faker::Lorem.sentence, street_address: Faker::Address.street_address, city: Faker::Address.city, state: "TX", zip: Faker::Address.zip, date: "05/08/2015", time: "7:30" )
+  Event.create(title: Faker::Lorem.word, description: Faker::Lorem.sentence, street_address: Faker::Address.street_address, city: Faker::Address.city, state: "TX", zip: Faker::Address.zip, date: "05/08/2015", start_time: "7" )
 end
 
 

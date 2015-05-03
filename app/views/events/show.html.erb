@@ -2,15 +2,12 @@
 
    <h2>Hi <%= current_user.username %>.</h2>
       <div class="jumbotron">
-        <h3>Potluck Deets: </h3>
-          <li><%= @event.title %></li>
+        <h3>Potluck Deets for <%= @event.title %> on <%= @event.date.strftime("%B %d, %Y") %> </h3>
+        Start Time: <%= @event.start_time %> pm<br>
+        Location:
           <li><%= @event.street_address %></li>
-          <li><%= @event.city %></li>
-          <li>state: <%= @event.state %></li>
-          <li><%= @event.zip %></li>
-          <li><%= @event.date.strftime("%B %d, %Y") %></li>
-          <li>time: <%= @event.time.strftime(" %H:%M") %></li>
-          <li><%= @event.description %></li>
+          <li><%= @event.city %> <%= @event.state %> <%= @event.zip %></li>
+        Description: <%= @event.description %>
       </div>
       <% unless current_user.events.include?(@event.id) %>
           <%= link_to "Join 'em!", edit_event_path(@event), class: "btn btn-success" %>

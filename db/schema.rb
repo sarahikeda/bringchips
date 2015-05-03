@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150430205120) do
     t.string   "state"
     t.integer  "zip"
     t.datetime "date"
-    t.datetime "time"
+    t.integer  "start_time"
     t.integer  "creator_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
