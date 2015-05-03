@@ -12,7 +12,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.creator = @current_user
+    @event.creator_id = @user.id
     if @event.save
       redirect_to welcome_index_path
     else
@@ -22,6 +22,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @event = Event.find_by_id(params[:id])
   end
 
 private

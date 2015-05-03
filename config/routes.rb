@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   resources :users do
     resource :dishes
-    resource :events
   end
 
+  resources :events
   resources :occasions
   root 'welcome#index'
 

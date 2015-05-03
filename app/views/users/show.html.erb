@@ -1,15 +1,15 @@
  <div class="container">
    <h2>Hi <%= current_user.username %>.</h2>
       <li>E-mail: <%= current_user.email %></li>
-    <% if current_user.occasions.empty? %>
+    <% if current_user.events.empty? %>
       <div class="jumbotron">
          <p>You have no upcoming potlucks scheduled. Get social. <%= link_to "Join a potluck!", new_user_events_path(current_user) %></p>
       </div>
       <% else %>
         <div class="row">
           <h3>Upcoming Potlucks</h3>
-          <% current_user.occasions.each do |occasion| %>
-            <li><%= link_to occasion.title, occasion_path(occasion) %></li>
+          <% current_user.events.each do |event| %>
+            <li><%= link_to event.title, event_path(event) %></li>
           <% end %>
         </div>
       <% end %>
