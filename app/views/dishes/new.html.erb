@@ -19,13 +19,17 @@
 
       <br />
     </div>
+
+     <div class="field">
+      <%= f.label :event, "Events: " %> <br />
+        <%= f.select "events", current_user.events.map {|event| [ event.title, event.title ] }, { prompt: "Select Potluck" } %>
+
+
+    </div>
   </br>
 
     <br>
      <%= submit_tag "Make it.", id: "submit-new-meetup-btn",class: "btn btn-success" %>
   <% end %>
-
-<!--
-    <%= link_to image_tag("outdoor_potluck.jpg", :class => "outdoor-potluck"), user_path(current_user) %> -->
   </div>
 
