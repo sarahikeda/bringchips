@@ -4,28 +4,22 @@
   <%= form_for @dish do |f|  %>
 
     <div class="field">
-      <%= f.label :name, "Name of dish: " %> <br />
+      <%= f.label :name, "Name of dish: " %> </br>
       <%= f.text_field :name %>
     </div>
 
     <div class="field">
-      <%= f.label :course, "Course: " %> <br />
+      <%= f.label :course, "Course: " %> </br>
       <%= f.text_field :course %>
     </div>
 
     <div class="field">
-      <%= f.label :gluten_free, "Gluten-free? " %> <br />
-       <%= f.check_box :gluten_free %> <br />
+      <%= f.label :gluten_free, "Gluten-free? " %> </br
+       <%= f.check_box :gluten_free %> <br /></br>
+    </div></br></br>
 
-      <br />
-    </div>
-  </br>
-
-    <br>
-     <%= submit_tag "Make it.", id: "submit-new-meetup-btn",class: "btn btn-success" %>
+    <%= submit_tag "Make it.", id: "submit-new-meetup-btn",class: "btn btn-success" %>
   <% end %>
-
-
-    <%= link_to image_tag("outdoor_potluck.jpg", :class => "outdoor-potluck"), user_path(current_user) %>
+  <%= link_to image_tag("outdoor_potluck.jpg", :class => "outdoor-potluck"), user_path(current_user) %>
   </div>
 </div>

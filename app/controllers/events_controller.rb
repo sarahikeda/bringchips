@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-
   respond_to :html, :js
+
   def index
     @events = Event.all.order('date DESC')
   end
@@ -21,6 +21,7 @@ class EventsController < ApplicationController
       render "new"
     end
   end
+
   def edit
     @event = Event.find(params[:id])
     @event.attendees << current_user
@@ -35,7 +36,6 @@ class EventsController < ApplicationController
   end
 
 private
-
 def event_params
     params.require(:event).permit(:title, :description, :street_address, :city, :state, :zip, :date, :start_time)
   end

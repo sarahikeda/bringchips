@@ -1,8 +1,6 @@
 <div class = "container">
-
   <h2>What will you bring?</h2>
   <%= form_for @dish do |f|  %>
-
     <div class="field">
       <%= f.label :name, "Name of dish: " %> <br />
       <%= f.text_field :name %>
@@ -15,21 +13,15 @@
 
     <div class="field">
       <%= f.label :gluten_free, "Gluten-free? " %> <br />
-       <%= f.check_box :gluten_free %> <br />
-
-      <br />
+      <%= f.check_box :gluten_free %> <br /><br />
     </div>
 
-     <div class="field">
+    <div class="field">
       <%= f.label :event, "Events: " %> <br />
-        <%= f.select "events", current_user.created_events.map {|event| [ event.title, event.title ] }, { prompt: "Select Potluck" } %>
+      <%= f.select "events", current_user.created_events.map {|event| [ event.title, event.title ] }, { prompt: "Select Potluck" } %>
+    </div></br></br>
 
-
-    </div>
-  </br>
-
-    <br>
-     <%= submit_tag "Make it.", id: "submit-new-meetup-btn",class: "btn btn-success" %>
+    <%= submit_tag "Make it.", id: "submit-new-meetup-btn",class: "btn btn-success" %>
   <% end %>
-  </div>
+</div>
 

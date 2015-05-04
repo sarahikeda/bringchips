@@ -5,11 +5,11 @@
       <th>Event</th>
       <th>Date</th>
     </tr>
-  <% @events.each do |event| %>
-  <tr>
-   <td><%= link_to event.title, event_path(event) %> </td>
-    <td><%=event.date.strftime("%B")%> <%=event.date.strftime("%d")%> </td>
-  <% end %>
-</table>
-    </tr>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= link_to event.title, event_path(event) %> </td>
+        <td><%=event.date.strftime("%B")%> <%=event.date.strftime("%d")%> </td>
+    <% end %>
+  </table>
+      </tr>
 </div>

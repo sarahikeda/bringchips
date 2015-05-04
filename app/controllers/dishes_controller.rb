@@ -16,9 +16,9 @@ class DishesController < ApplicationController
       )
       current_user.dishes << @dish
       @dish.events << @event
-
       redirect_to user_path(current_user)
   end
+
   def show
     @dish = Dish.find(params[:id])
     @events = @dish.events
