@@ -97,3 +97,8 @@ a {
   background: rgba(148, 148, 148, 0.35);
   max-width: 75%;
 }
+
+.react {
+  background-image: none;
+  background-color: white;
+}
