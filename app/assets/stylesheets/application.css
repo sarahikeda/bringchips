@@ -22,6 +22,10 @@ body {
    background-size: cover;
 }
 
+a {
+  color: black;
+}
+
 .no-background {
   background-image: none;
   background-color: white;
@@ -65,15 +69,6 @@ body {
   font-family: "Lora";
 }
 
-.corn-img {
-  max-width: 50%;
-  max-height: 70%;
-  border-radius: 10%;
-  float: right;
-  position: relative;
-  margin-right: 10px;
-}
-
 .btn  {
   background: rgba(195, 28, 187, 0.7);
   border-color: rgb(214, 105, 221);
@@ -100,4 +95,5 @@ body {
 
 .jumbotron {
   background: rgba(148, 148, 148, 0.35);
+  max-width: 75%;
 }

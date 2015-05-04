@@ -8,12 +8,15 @@
           <li><%= @event.street_address %></li>
           <li><%= @event.city %> <%= @event.state %> <%= @event.zip %></li>
         Description: <%= @event.description %>
+        <h4>People are already bringing:</h4>
+          <ul>
+          <% @dishes.each do |dish| %>
+              <li><%= link_to dish.name, dish_path(dish) %>
+          <% end %>
+          </ul>
+            <% if @created_event.empty? && @attending_event.empty? %>
+              <%= link_to "Join 'em!", user_path(current_user),class: "btn btn-success" %>
+            <% end %>
+            <%= link_to "Bring something.", new_dish_path, class:  "btn btn-success" %>
       </div>
-      <div class = "add-dish">
-      </div>
-      <% if current_user.events.where(id: @event.id).empty? %>
-          <%= link_to "Join 'em!", user_path(current_user),class: "button-join btn-success" %>
-
-
-      <% end %>
 </div>

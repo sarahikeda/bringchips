@@ -26,8 +26,12 @@ class EventsController < ApplicationController
     @event.attendees << current_user
     redirect_to user_path(params[:id])
   end
+
   def show
     @event = Event.find_by_id(params[:id])
+    @dishes = @event.dishes
+    @created_event = current_user.created_events.where(id: @event.id)
+    @attending_event = current_user.events.where(id: @event.id)
   end
 
 private
