@@ -8,10 +8,10 @@
           <li><%= @event.city %> <%= @event.state %> <%= @event.zip %></li>
 
         Description: <%= @event.description %>
-        <h4>People are already bringing:</h4>
+        <h4>Attendees:</h4>
         <ul>
           <% @dishes.each do |dish| %>
-            <li><%= link_to dish.name, dish_path(dish) %>
+            <li><%=dish.attendees.name %> is bringing <%= link_to dish.name, dish_path(dish) %>
           <% end %>
         </ul>
         <% if @created_event.empty? && @attending_event.empty? %>

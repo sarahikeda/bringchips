@@ -1,10 +1,8 @@
 class DishesController < ApplicationController
 
-  respond_to :html, :js
   def new
     @user = User.find_by_id(current_user.id)
     @dish = Dish.new
-    all_events
   end
 
   def create
@@ -24,10 +22,4 @@ class DishesController < ApplicationController
     @events = @dish.events
   end
 
-  def all_events
-    @created_and_attending = []
-    @created_and_attending << current_user.events
-    @created_and_attending << current_user.created_events
-    @created_and_attending
-  end
 end

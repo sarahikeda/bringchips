@@ -19,7 +19,14 @@ class UsersController < ApplicationController
     @created_events = current_user.created_events
   end
 
+  private
   def user_params
     params.require(:user).permit(:username, :name, :email, :password, :password_confirmation)
+  end
+  def all_events
+    @created_and_attending = []
+    @created_and_attending << current_user.events
+    @created_and_attending << current_user.created_events
+    @created_and_attending
   end
 end

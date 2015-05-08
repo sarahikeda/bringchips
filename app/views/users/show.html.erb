@@ -21,23 +21,24 @@
         </div>
       <% end %>
 
-      <div class="row">
-        <div class="col-xs-12 tile-container">
-          <div class="jumbotron">
-            <h3>Dishes To Prepare:</h3>
-              <% if @dishes.empty? %>
-                <p>You haven't signed up to cook anything yet? Get with it.</p>
-                <p><%= link_to "Add Dish", new_dish_path, class: "btn btn-success"   %></p>
-              <% else %>
-                <% @dishes.each do |dish| %>
-                  <li><%= link_to dish.name, dish_path(dish) %></li>
-                <% end %>
-                <p><%= link_to "Add dish.",  new_dish_path, class: "btn btn-success"   %></p>
-              <% end %></br>
+      <% if @created_and_attending = [] %>
+        <div class="row">
+          <div class="col-xs-12 tile-container">
+            <div class="jumbotron">
+              <h3>Dishes To Prepare:</h3>
+                <% if @dishes.empty? %>
+                  <p>You haven't signed up to cook anything yet? Get with it.</p>
+                  <p><%= link_to "Add Dish", new_dish_path, class: "btn btn-success"   %></p>
+                <% else %>
+                  <% @dishes.each do |dish| %>
+                    <li><%= link_to dish.name, dish_path(dish) %></li>
+                  <% end %>
+                  <p><%= link_to "Add dish.",  new_dish_path, class: "btn btn-success"   %></p>
+                <% end %></br>
+            </div>
           </div>
         </div>
-      </div>
-
+      <% end %>
     <% if @created_events %>
       <div class="row">
         <div class="col-xs-12 tile-container">

@@ -7,6 +7,7 @@ gem 'rails', '4.2.0'
 # gem 'pg'
 group :development do
   gem 'sqlite3'
+  gem 'better_errors'
 end
 group :production do
   gem 'pg'
