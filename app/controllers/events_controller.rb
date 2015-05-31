@@ -31,6 +31,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find_by_id(params[:id])
     @dishes = @event.dishes
+    @attendees =
     @created_event = current_user.created_events.where(id: @event.id)
     @attending_event = current_user.events.where(id: @event.id)
   end

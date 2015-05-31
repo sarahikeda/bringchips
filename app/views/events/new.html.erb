@@ -1,37 +1,31 @@
 <div class = "container">
-
+  <div class = "add-item">
     <h2>Add A New Potluck</h2>
     <%= form_for @event do |f| %>
       <p>
-        <%= f.label :title, "Fancy Name" %></br>
-        <%= f.text_field :title, :size => "30x10" %>
-     </p>
+        <%= f.text_field :title, :cols => "30", :rows => "50", :placeholder => "Fancy Name" %>
+      </p>
 
      <p>
-      <%= f.label :street_address, "Street Address" %></br>
-      <%= f.text_field :street_address, :size => "30x10" %>
+      <%= f.text_field :street_address, :size => "30x10", :placeholder => "Street Address" %>
     </p>
     <p>
-      <%= f.label :zip %></br>
-      <%= f.text_field :zip, :size => "10x10" %>
+      <%= f.text_field :zip, :size => "30x10", :placeholder => "Zip Code" %>
     </p>
 
      <p>
-      <%= f.label :date %></br>
       <%= f.date_field :date %>
     </p>
 
      <p>
-      <%= f.label :start_time %></br>
-      <%= f.text_field :start_time %>
+      <%= f.text_field :start_time, :placeholder => "Start Time" %>
     </p>
     <p>
-      <%= f.label :description %></br>
-      <%= f.text_area :description, :size => "60x5" %>
+      <%= f.text_area :description, :size => "60x5", :placeholder => "Description" %>
     </p>
 
     <p>
        <%= submit_tag "Create It.", id: "submit-new-meetup-btn",class: "btn btn-success" %>
-  <% end %>
-
+    <% end %>
+  </div>
 </div>

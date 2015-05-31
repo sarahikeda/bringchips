@@ -11,7 +11,9 @@
         <h4>Attendees:</h4>
         <ul>
           <% @dishes.each do |dish| %>
-            <li><%=dish.attendees.name %> is bringing <%= link_to dish.name, dish_path(dish) %>
+            <% dish.attendees.each do |attendee|%>
+              <li><%= attendee.name %> is bringing <%= link_to dish.name, dish_path(dish) %></li>
+            <% end %>
           <% end %>
         </ul>
         <% if @created_event.empty? && @attending_event.empty? %>
