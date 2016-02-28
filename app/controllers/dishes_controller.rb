@@ -1,7 +1,7 @@
 class DishesController < ApplicationController
 
   def new
-    @user = User.find_by_id(current_user.id)
+    @user = User.find(current_user.id)
     @dish = Dish.new
   end
 
