@@ -20,8 +20,7 @@
           </div>
         </div>
       <% end %>
-
-      <% if @created_and_attending = [] %>
+      <% if @created_and_attending.present? %>
         <div class="row">
           <div class="col-xs-12 tile-container">
             <div class="jumbotron">
@@ -33,7 +32,6 @@
                   <% @dishes.each do |dish| %>
                     <li><%= link_to dish.name, dish_path(dish) %></li>
                   <% end %>
-                  <p><%= link_to "Add dish.",  new_dish_path, class: "btn btn-success"   %></p>
                 <% end %></br>
             </div>
           </div>
