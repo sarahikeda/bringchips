@@ -3,4 +3,6 @@ class Event < ActiveRecord::Base
   has_many :occasions
   has_many :attendees, through: :occasions, source: :attendee
   has_many :dishes, through: :occasions
+
+  validates :date, presence: true
 end
