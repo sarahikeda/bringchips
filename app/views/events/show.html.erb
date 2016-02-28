@@ -1,7 +1,7 @@
 <div class = "container">
    <h2>Hi <%= current_user.username %>.</h2>
       <div class="jumbotron">
-        <h3>Potluck Deets for <%= @event.title %> on <%= @event.date.strftime("%B %d, %Y") %> </h3>
+        <h3>Potluck Deets for <%= @event.title %> on <%= @event.date.strftime("%B %d, %Y") %></h3>
         Start Time: <%= @event.start_time %> pm<br>
         Location:
           <li><%= @event.street_address %></li>

@@ -6,7 +6,6 @@ class EventsController < ApplicationController
   end
 
   def new
-    @user = current_user
     @event = Event.new
     render 'new'
   end
@@ -32,13 +31,12 @@ class EventsController < ApplicationController
   def show
     @event = Event.find_by_id(params[:id])
     @dishes = @event.dishes
-    @attendees =
     @created_event = current_user.created_events.where(id: @event.id)
     @attending_event = current_user.events.where(id: @event.id)
   end
 
 private
-def event_params
+  def event_params
     params.require(:event).permit(:title, :description, :street_address, :city, :state, :zip, :date, :start_time)
   end
 end
