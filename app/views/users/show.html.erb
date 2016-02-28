@@ -27,12 +27,12 @@
               <h3>Dishes To Prepare:</h3>
                 <% if @dishes.empty? %>
                   <p>You haven't signed up to cook anything yet? Get with it.</p>
-                  <p><%= link_to "Add Dish", new_dish_path, class: "btn btn-success"   %></p>
                 <% else %>
                   <% @dishes.each do |dish| %>
                     <li><%= link_to dish.name, dish_path(dish) %></li>
                   <% end %>
                 <% end %></br>
+                <p><%= link_to "Add Dish", new_dish_path, class: "btn btn-success"   %></p>
             </div>
           </div>
         </div>
